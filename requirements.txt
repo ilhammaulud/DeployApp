@@ -1,13 +1,11 @@
 pandas==2.3.1
+numpy==2.2.6
 streamlit==1.48.0
 matplotlib==3.10.5
 seaborn==0.13.2
 pillow==11.3.0
-numpy==2.2.6
 plotly==6.2.0
 scikit-learn==1.7.1
-feature-engineering==1.8.3
+feature-engineering==2.1.4
 joblib==1.5.1
-xgboost==3.0.4
-python
-
+xgboost==1.7.6
