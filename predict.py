@@ -46,7 +46,11 @@ def run():
     try:
       if submit:
           result = model.predict(data_inf)
-          st.write(f'# Predicted Risk: {result[0]}')
+          if result[0] == 0 :
+              x = 'Normal'
+          else :
+              x = 'Attack Detected'
+          st.write(f'# Predicted Risk: {x}')
           st.dataframe(
               data_inf.T.reset_index().rename(columns={0: 'Value', 'index': 'Field'}),
               height=500
