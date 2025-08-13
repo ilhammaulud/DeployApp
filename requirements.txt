@@ -1,0 +1,9 @@
+pandas
+streamlit
+matplotlib
+seaborn
+pillow
+numpy==2.2.6
+plotly
+stickit-learn==1.7.1
+feature-engineering==1.8.3
