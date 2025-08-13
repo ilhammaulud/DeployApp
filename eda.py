@@ -56,8 +56,8 @@ def run():
     sns.histplot(data['ip_reputation_score'], kde=True, bins=10)
     plt.title('Histogram of IP Reputation Score')
     st.pyplot(fig)
-    st.markdown(
-    '''Visualisasi histogram ip_reputation_score menunjukkan sebaran skor reputasi IP dari seluruh sesi yang dianalisis. 
+    st.markdown('''
+        Visualisasi histogram ip_reputation_score menunjukkan sebaran skor reputasi IP dari seluruh sesi yang dianalisis. 
         Garis KDE memberikan gambaran kepadatan distribusi secara lebih halus.
 
         Berdasarkan grafik:
@@ -74,8 +74,8 @@ def run():
     sns.countplot(x='protocol_type', data=data)
     plt.title('Protocol Type Distribution')
     st.pyplot(fig)
-    st.markdown(
-    '''Visualisasi countplot ini menampilkan jumlah sesi berdasarkan jenis protokol (protocol_type) yang digunakan dalam dataset.
+    st.markdown('''
+        Visualisasi countplot ini menampilkan jumlah sesi berdasarkan jenis protokol (protocol_type) yang digunakan dalam dataset.
         
         Dari grafik:
 
@@ -90,8 +90,8 @@ def run():
     fig_px = px.scatter(data, x='ip_reputation_score', y='failed_logins', color='protocol_type',
                         hover_data=['session_id', 'browser_type'])
     st.plotly_chart(fig_px)
-    st.markdown(
-    '''Visualisasi scatter plot ini menunjukkan hubungan antara skor reputasi IP (ip_reputation_score) dengan jumlah login gagal (failed_logins), diwarnai berdasarkan protocol_type.
+    st.markdown('''
+        Visualisasi scatter plot ini menunjukkan hubungan antara skor reputasi IP (ip_reputation_score) dengan jumlah login gagal (failed_logins), diwarnai berdasarkan protocol_type.
         
         Dari plot ini:
 
@@ -133,7 +133,7 @@ def run():
         * Korelasi yang rendah antar fitur ini mengindikasikan bahwa tidak ada masalah multikolinearitas signifikan di dataset.
 
         * Fitur-fitur yang ada kemungkinan memberikan informasi yang relatif unik, sehingga semuanya masih layak dipertimbangkan dalam proses pemodelan tanpa risiko redundansi yang tinggi.
-''')
+    ''')
 
 
 if __name__ == '__main__':
