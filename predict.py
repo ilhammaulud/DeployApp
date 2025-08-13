@@ -43,13 +43,18 @@ def run():
     data_inf = pd.DataFrame([data_inf])
 
     # predict
-    if submit:
-        result = model.predict(data_inf)
-        st.write(f'# Predicted Risk: {result[0]}')
-        st.dataframe(
-            data_inf.T.reset_index().rename(columns={0: 'Value', 'index': 'Field'}),
-            height=500
-        )
+    try:
+      if submit:
+          result = model.predict(data_inf)
+          st.write(f'# Predicted Risk: {result[0]}')
+          st.dataframe(
+              data_inf.T.reset_index().rename(columns={0: 'Value', 'index': 'Field'}),
+              height=500
+          )
+      else:
+          print('Tolong Submit')
+    except Exception as e:
+        st.error(f"Terjadi error saat prediksi: {e}")
 
 if __name__ == '__main__':
     run()
