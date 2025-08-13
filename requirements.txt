@@ -9,4 +9,5 @@ scikit-learn==1.7.1
 feature-engineering==1.8.3
 joblib==1.5.1
 xgboost==3.0.4
-python==3.13.5
+python
+
