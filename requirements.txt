@@ -7,3 +7,4 @@ numpy==2.2.6
 plotly==6.2.0
 scikit-learn==1.7.1
 feature-engineering==1.8.3
+joblib==1.5.1
